@@ -5,19 +5,26 @@
 
 
 double pown(double value, uint16_t n) {
-  return pow(value, n);
+  double res;
+  res = pow(value, n);
+  return res;
 }
 
 uint64_t fact(uint16_t n) {
+  uint64_t res;
   if (n == 1) {
-    return 1;
+    res = 1;
+    return res;
   } else {
-    return n * fact(n - 1);
+    res = n * fact(n - 1);
+    return res;
   }
 }
 
 double calcItem(double x, uint16_t n) {
-  return pow(x, n)/fact(n);
+  double res;
+  res = pow(x, n)/fact(n);
+  return res;
 }
 
 double expn(double x, uint16_t count) {
