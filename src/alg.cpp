@@ -38,8 +38,13 @@ double sinn(double x, uint16_t count) {
 
 double cosn(double x, uint16_t count) {
   double res;
+  double m;
   for (uint16_t n = 1; n <= count; n++) {
-    res += pown(-1, n - 1) * pown(x, 2 * n - 2) / fact(2 * n - 2);
+    if (n == 1) {
+    m = 1;
+  } else {
+    m = n * fact(n - 1);
   }
+    res += pow(-1, n - 1) * pow(x, 2 * n - 2) / m;
   return res;
 }
