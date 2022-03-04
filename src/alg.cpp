@@ -32,6 +32,7 @@ double expn(double x, uint16_t count) {
   int n = 0;
   for (int i = 0; i <= count; i++) {
     res = pow(x, n)/fact(n);
+    n++;
   }
   return res;
 }
