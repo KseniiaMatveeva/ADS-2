@@ -22,7 +22,7 @@ double calcItem(double x, uint16_t n) {
 
 double expn(double x, uint16_t count) {
   double res;
-  int n = 0;
+  int n = 1;
   for (int i = 0; i <= count; i++) {
     res = pow(x, n)/fact(n);
     n++;
