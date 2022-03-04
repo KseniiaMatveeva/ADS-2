@@ -29,13 +29,15 @@ double expn(double x, uint16_t count) {
 }
 
 double sinn(double x, uint16_t count) {
-  double res;
-  res = pown(-1, count - 1) * calcItem(x, 2 * count - 1) * sinn(x, count - 1);
+  double res = 0;
+  for (int n = 1; n <= count; n++) {
+    res += pown(-1, n - 1) * calcItem(x, 2 * n - 1);
+  }
   return res;
 }
 
 double cosn(double x, uint16_t count) {
-  double res;
+  double res = 0;
   for (int n = 1; n <= count; n++) {
     res += pown(-1, n - 1) * calcItem(x, 2 * n - 2);
   }
