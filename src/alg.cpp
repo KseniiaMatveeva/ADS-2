@@ -21,10 +21,10 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-  double res;
+  double res = 1;
   int n = 1;
   for (int i = 0; i <= count; i++) {
-    res = pow(x, n)/fact(n);
+    res += calcItem(x, n);
     n++;
   }
   return res;
