@@ -5,8 +5,7 @@
 
 
 double pown(double value, uint16_t n) {
-  uint16_t res = pow(value, n);
-  return res;
+  return pow(value, n);
 }
 
 uint64_t fact(uint16_t n) {
@@ -18,7 +17,7 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-  uint16_t res;
+  double res;
   if (x = 0) {
     return 0;
   } else {
@@ -28,7 +27,7 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-  uint16_t res;
+  double res;
   int n = 0;
   for (int i = 0; i <= count; i++) {
     res = pow(x, n)/fact(n);
