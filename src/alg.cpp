@@ -47,4 +47,5 @@ double cosn(double x, uint16_t count) {
   }
     res += pow(-1, n - 1) * pow(x, 2 * n - 2) / m;
   return res;
+  }
 }
