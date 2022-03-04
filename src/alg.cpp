@@ -28,13 +28,18 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-  
+  uint16_t res;
+  int n = 0;
+  for (int i = 0; i <= count; i++) {
+    res = pow(x, n)/fact(n);
+  }
+  return res;
 }
 
 double sinn(double x, uint16_t count) {
-
+  return 0;
 }
 
 double cosn(double x, uint16_t count) {
-
+  return 0;
 }
