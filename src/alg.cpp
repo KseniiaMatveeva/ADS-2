@@ -1,13 +1,14 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
-#include <cmath>
+//#include <cmath>
 #include "alg.h"
 
 
 double pown(double value, uint16_t n) {
-  double res;
-  res = pow(value, n);
-  return res;
+  if (n = 0) { 
+    return 1;
+  }
+  return value * pown(value, n - 1);
 }
 
 uint64_t fact(uint16_t n) {
@@ -23,7 +24,7 @@ uint64_t fact(uint16_t n) {
 
 double calcItem(double x, uint16_t n) {
   double res;
-  res = pow(x, n)/fact(n);
+  res = pown(x, n)/fact(n);
   return res;
 }
 
@@ -46,7 +47,7 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
   double res = 0;
   for (uint16_t n = 1; n <= count; n++) {
-    res += pow(-1, n - 1) * (pow(x, 2 * n - 2)/fact(2 * n - 2));
+    res += pown(-1, n - 1) * calcItem(x, 2 * n - 2);
   }
   return res;
 }
