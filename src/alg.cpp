@@ -5,7 +5,7 @@
 
 
 double pown(double value, uint16_t n) {
-  if (n = 0) { 
+  if (n = 0) {
     return 1;
   }
   return value * pown(value, n - 1);
