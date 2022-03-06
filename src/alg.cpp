@@ -46,5 +46,5 @@ double cosn(double x, uint16_t count) {
   for (uint16_t n = 1; n <= count; n++) {
     res += pown(-1, n - 1) * calcItem(x, 2 * n - 2);
   }
-  return res;
+  return res - 1;
 }
